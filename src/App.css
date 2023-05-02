@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+.input-search {
+  background-color: transparent;
+  outline: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input {
+  background-color: rgba(128, 128, 128, 0.164);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.border-nav {
+  border-bottom: 1px solid rgb(55, 55, 55);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.border-aktif {
+  border-bottom: 4px solid rgb(7, 52, 255);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.border-1 {
+  border-bottom: 1px solid rgb(37, 37, 37);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* focus:border-b-4 mt-2 border-blue-700 focus:text-white */
+
+/* sibebar */
+.sidebar {
+  left: -100%;
+  animation-name: animasiSidebar;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animasiSidebar {
+  100% {
+    left: 0;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.sidebaroff {
+  left: 0;
+  animation-name: animasiSidebarOff;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animasiSidebarOff {
+  100% {
+    left: -100%;
   }
 }

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Arvo:ital,wght@1,400;1,700&family=Comfortaa&family=DynaPuff&family=Inconsolata&family=Merriweather:wght@400;700&family=Montserrat&family=Noto+Sans+JP:wght@400;500&family=Noto+Sans+NKo&family=Oswald&family=Poppins:wght@400;500&family=Righteous&family=Roboto+Mono:wght@100;500&family=Roboto:wght@100&family=Satisfy&family=Signika+Negative:wght@300;400&family=Ubuntu&display=swap');
+
+/* custom */
+.border-b {
+    border-bottom: 1px solid white;
+}
+
+.nav-home {
+    box-shadow: 0 0 10px rgba(248, 246, 246, 0.5);
+}
+
+.nav-bawah {
+    border-top: 1px solid rgba(248, 246, 246, 0.2);
+}
+/* end custom */
+
+.font-utama {
+    font-family: 'Satisfy', cursive;
+}
+
+.font-saya {
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-status {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    /* background-color: g; */
+}

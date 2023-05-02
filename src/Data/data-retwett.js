@@ -1,0 +1,3 @@
+const dataRetwett = [{}]
+
+export {dataRetwett}
