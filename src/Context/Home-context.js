@@ -12,6 +12,12 @@ function  reducer(state, action) {
             return {...state, borderUntukanda: 'border-aktif', borderMengikuti: ''}
         case 'Mengikuti':
             return {...state, borderMengikuti: 'border-aktif', borderUntukanda:''}
+        case 'Coment':
+            return {...state, coment: 'blue'}
+        case 'Retweet':
+            return {...state, retweet: 'blue'}
+        case 'Love':
+            return {...state, love: 'red'}
         default:
             throw new Error()
     }
@@ -20,7 +26,10 @@ function  reducer(state, action) {
 
 const initialState = {
     borderUntukanda: 'border-aktif',
-    borderMengikuti: ''
+    borderMengikuti: '',
+    coment: 'gray',
+    retweet: 'gray',
+    love: 'gray'
 }
 
 export function HomeProvider({children}) {

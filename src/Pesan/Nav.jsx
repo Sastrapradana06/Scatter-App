@@ -5,4 +5,4 @@ export default function NavPesan() {
             <Nav />
         </div>
     )
-}
+}  

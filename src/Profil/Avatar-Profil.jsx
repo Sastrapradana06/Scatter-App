@@ -1,7 +1,11 @@
-export default function AvatarProfil(url) {
-    return (
-        <div className="w-max -mt-12 ml-2 rounded-full">
-            <img src={url.avatar} alt="" className="w-[70px] h-[70px] rounded-full object-cover border-2 border-[black]"/>
-        </div>
-        )
+import { DataUser } from "../Data/data-user";
+import Avatar from "../Utils/avatar";
+
+export default function AvatarProfil() {
+    const user = DataUser
+  return (
+    <div className=" -mt-12 ml-2 rounded-full">
+      <img src={user.avatar} alt="" className={`rounded-full w-[70px] h-[70px] border-[#8080806e] object-cover`} />
+    </div>
+  );
 }
