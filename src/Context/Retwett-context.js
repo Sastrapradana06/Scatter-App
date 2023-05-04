@@ -13,7 +13,7 @@ function reducer(state, action) {
 }
 
 const initialState = {
-    dataRetwett : {}
+    dataRetwett : []
 }
 
 

@@ -18,9 +18,9 @@ function App() {
     <div className="font-saya">
       <Navbar />
       <NavProvider>
-        <Sidebar />
+      <Sidebar />
       <HomeProvider>
-        <NotifProvider>
+      <NotifProvider>
         <div>
             <Routes>
               <Route path='/' element={<Home />} />

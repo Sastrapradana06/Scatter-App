@@ -59,7 +59,7 @@ export default function Profil() {
             Anda me-Retweet</p>
         </div>
       </div>
-      <div className="mt-2 w-full border p-1 mb-[200px]">
+      <div className=" w-full p-1 mb-[60px]">
         <ContenProfil />
       </div>
     </div>

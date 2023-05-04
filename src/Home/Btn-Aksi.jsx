@@ -1,6 +1,7 @@
 
 import { IconsComent, IconsLove, IconsRetweet, IconsSosial, IconsViews } from "../Utils/Icons";
 import { useHomeContext } from "../Context/Home-context";
+import '../App.css'
 
 export default function BtnAksi(users) {
   const [state, dispatch] = useHomeContext()
@@ -16,7 +17,7 @@ export default function BtnAksi(users) {
       </div>
       {/* retwet */}
       <div className="flex items-center gap-1">
-        <button onClick={() => dispatch({type: 'Retweet'})}>
+        <button>
           {IconsRetweet(state.retweet)}
         </button>
         <p className="text-[.9rem] text-slate-500">{users.rettwet}</p>

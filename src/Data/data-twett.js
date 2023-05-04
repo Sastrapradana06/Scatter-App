@@ -4,7 +4,7 @@ const dataTwett= [
     {
         avatar: 'https://i.pinimg.com/564x/9b/ef/91/9bef91892a86afb3700f1a834ff871ff.jpg',
         user:'sosmed Keras',
-        name: '@sosmedkeras',
+        name: 'sosmedkeras',
         verifaed: true,
         waktu: '1 hari',
         status: 'Selamat Lebaran Ges',
@@ -17,7 +17,7 @@ const dataTwett= [
     {
         avatar: 'https://i.pinimg.com/564x/c6/c7/85/c6c7851551260311757f13a0bcecd485.jpg',
         user:'putri',
-        name: '@puput',
+        name: 'puput',
         verifaed: false,
         waktu: '1 menit',
         status: 'Happy Eid Mubarak💗🙏',
@@ -30,7 +30,7 @@ const dataTwett= [
     {
         avatar: 'https://i.pinimg.com/564x/7c/65/6a/7c656a860a0b3f42abeee1ad9d9e1026.jpg',
         user:'raihan',
-        name: '@syaputraraihan',
+        name: 'syaputraraihan',
         verifaed: false,
         waktu: '1 jam',
         status: 'Mohon Maaf Lahir Dan Batin🙏🙏',
@@ -43,7 +43,7 @@ const dataTwett= [
     {
         avatar: 'https://i.postimg.cc/RCwvfTnK/IMG-20230425-003408-984.webp',
         user:'qodray',
-        name: '@masqodray',
+        name: 'masqodray',
         verifaed: true,
         waktu: '3 jam',
         status: 'Abis berminta maaf, jangan lupa liburan ygy😂',
@@ -56,7 +56,7 @@ const dataTwett= [
     {
         avatar: 'https://i.pinimg.com/564x/4d/31/57/4d31578e5ab245fa921426f331d249d9.jpg',
         user:'ilham',
-        name: '@ilmansyah',
+        name: 'ilmansyah',
         verifaed: true,
         waktu: '9 jam',
         status: 'Kangen Lebaran Pas Waktu Masih Kecil😐',
