@@ -1,4 +1,5 @@
 import "../App.css";
+import { useHomeContext } from "../Context/Home-context";
 import { DataUser } from "../Data/data-user";
 import AvatarProfil from "../Profil/Avatar-Profil";
 import BtnNavigasi from "../Profil/Btn-Navigasi";
@@ -6,7 +7,7 @@ import ContenProfil from "../Profil/Content-Profil";
 
 export default function Profil() {
   const user = DataUser;
-  console.log(user);
+  const [state] = useHomeContext()
   return (
     <div className="text-white w-full h-max ">
       <div className="section-atas">
@@ -56,7 +57,7 @@ export default function Profil() {
               />
             </svg>
           </span>
-            Anda me-Retweet</p>
+            {state.getRetweet.length === 0 ? 'Anda belum me-Retweet' : 'anda me-Retweet'}</p>
         </div>
       </div>
       <div className=" w-full p-1 mb-[60px]">

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useHomeContext } from "../Context/Home-context";
 
 function IconsComent() {
@@ -9,13 +10,56 @@ function IconsComent() {
   );
 }
 
-function IconsRetweet() {
-  const [state] = useHomeContext()
+function IconsRetweet(e) {
+  const [state, dispatch] = useHomeContext()
+
+  function Retweet(item) {
+    const updatedData = state.getRetweet.filter(data => data.item !== item);
+  
+    if (updatedData.length === state.getRetweet.length) {
+      // Data tidak ditemukan dalam array, tambahkan data baru
+      dispatch({
+        type: 'GetRetweet',
+        payload: [...state.getRetweet, {item}]
+      });
+    } else {
+      // Data ditemukan dalam array, hapus data tersebut
+      dispatch({
+        type: 'GetRetweet',
+        payload: updatedData
+      });
+    }
+    console.log('Kode setelah dispatch');
+  }
+
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill={state.retweet} class="bi bi-repeat" viewBox="0 0 16 16">
+      <button onClick={Retweet.bind(this, e)}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"  class="bi bi-repeat" viewBox="0 0 16 16" className={`fill-gray-500`}>
         <path d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192Zm3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z" />
       </svg>
+      </button>
     )
+}
+
+function IconsTerRetweet(e) {
+  const [state, dispatch] = useHomeContext()
+
+  function deleteRetweet(item) {
+    const newRetweet = state.getRetweet.filter(e => e !== item)
+    // console.error(newRetweet);
+
+    dispatch({
+      type: 'DeleteRetweet',
+      payload: newRetweet
+    });
+  }
+  return (
+    <button onClick={deleteRetweet.bind(this, e)}>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"  class="bi bi-repeat" viewBox="0 0 16 16" className={`fill-red-500`}>
+      <path d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192Zm3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z" />
+    </svg>
+  </button>
+  )
 }
 
 function IconsLove() {
@@ -35,23 +79,39 @@ function IconsViews() {
     )
 }
 
-function IconsSosial() {
+function IconsSosial(e) {
+  // const [state, dispatch] = useHomeContext()
+
+  // function deleteTweet(item) {
+    
+  //   const filterItem = state.getRetweet.filter((e) => {
+  //     return e.item !== item
+  //   })
+
+  //   dispatch({
+  //     type: 'GetRetweet',
+  //     payload: filterItem
+  //     })
+  // }
+
     return (
+      // <button onClick={deleteTweet.bind(this, e)}>
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="gray" class="bi bi-link" viewBox="0 0 16 16">
         <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
         <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z" />
       </svg>
+      // </button>
     )
 }
 
 function IconsVerified() {
   return (
-    <span className="-ml-[6px]">
+    <button className="-ml-[6px]">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(0, 136, 255)" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
       <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
     </svg>
-  </span>
+  </button>
   )
 }
 
-export {IconsComent, IconsRetweet, IconsLove, IconsViews, IconsSosial, IconsVerified}
+export {IconsComent, IconsRetweet, IconsLove, IconsViews, IconsSosial, IconsVerified, IconsTerRetweet}
