@@ -33,6 +33,7 @@ const initialState = {
     retweet: 'gray',
     love: 'gray',
     getRetweet: [],
+    getSuka: [],
     statusRetweet: false
 }
 

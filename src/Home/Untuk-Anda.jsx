@@ -32,17 +32,12 @@ export default function ContentAnda() {
                 </div>
                 {/* retwet */}
                 <div className="flex items-center gap-1">
-                  {/* {state.statusRetweet ? (
-                    (IconsTerRetweet(users))
-                    ) : (
-                      (IconsRetweet(users))
-                      )} */}
-                          {IconsRetweet(users)} 
+                  {IconsRetweet(users)} 
                   <p className="text-[.9rem] text-slate-500">{users.rettwet}</p>
                 </div>
                 {/* like */}
                 <div className="flex items-center gap-1">
-                  <button onClick={() => dispatch({ type: "Love" })}><IconsLove /></button>
+                  {IconsLove(users)}
                   <p className="text-[.9rem] text-slate-500">{users.likes}</p>
                 </div>
                 {/* tayangan */}

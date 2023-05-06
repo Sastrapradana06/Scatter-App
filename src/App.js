@@ -11,6 +11,7 @@ import { NotifProvider } from './Context/Notif-context';
 import { NavProvider } from './Context/Nav-context';
 import { Sidebar } from './pages/Sidebar';
 import Profil from './pages/Profil';
+import { ProfilProvider } from './Context/Profil-context';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <NavProvider>
       <Sidebar />
+      <ProfilProvider>
       <HomeProvider>
       <NotifProvider>
         <div>
@@ -32,6 +34,7 @@ function App() {
         </div>
       </NotifProvider>
       </HomeProvider>
+      </ProfilProvider>
       </NavProvider>
     </div>
   );

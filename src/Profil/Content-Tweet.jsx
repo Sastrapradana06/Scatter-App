@@ -1,8 +1,8 @@
 
 import { useHomeContext } from "../Context/Home-context";
-import { IconsComent, IconsLove, IconsRetweet, IconsSosial, IconsTerRetweet, IconsVerified, IconsViews } from "../Utils/Icons";
+import { IconsComent, IconsLove, IconsSosial, IconsTerRetweet, IconsVerified, IconsViews } from "../Utils/Icons";
 
-export default function ContenProfil() {
+export default function ContenTweet() {
     const [state] = useHomeContext()
     return (
         (state.getRetweet.map((e) => {
@@ -10,7 +10,7 @@ export default function ContenProfil() {
             <div className="flex gap-3 mt-3 w-[95%] m-auto" key={e.item.coment}>
                 <img src={e.item.avatar} alt="" className="w-[60px] h-[50px] rounded-full object-cover"/>
                 <div className="flex flex-col gap-1 w-full text-[.9rem]">
-                    <div className="flex gap-3 items-center w-full">
+                    <div className="flex gap-1 items-center w-full">
                         <p className="font-[500] text-[1rem]">{e.item.user}</p>
                         {e.item.verifaed ? (
                             <IconsVerified />
