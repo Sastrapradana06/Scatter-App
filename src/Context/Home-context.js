@@ -15,9 +15,13 @@ function  reducer(state, action) {
         case 'Coment':
             return {...state, coment: 'green'}
         case 'GetRetweet':
-            return {...state, retweet: 'green', getRetweet: action.payload}
+            return {...state, statusRetweet: true, getRetweet: action.payload}
+        case 'GetSuka':
+            return {...state, statusSuka: true ,getSuka: action.payload}
         case 'DeleteRetweet':
-            return {...state, getRetweet: action.payload}
+            return {...state, statusRetweet: false, getRetweet: action.payload}
+        case 'DeleteSuka':
+            return {...state, statusSuka: false , getSuka: action.payload}
         case 'Love':
             return {...state, love: 'crimson'}
         default:
@@ -29,12 +33,10 @@ function  reducer(state, action) {
 const initialState = {
     borderUntukanda: 'border-aktif',
     borderMengikuti: '',
-    coment: 'gray',
-    retweet: 'gray',
-    love: 'gray',
     getRetweet: [],
     getSuka: [],
-    statusRetweet: false
+    statusRetweet: false,
+    statusSuka: false
 }
 
 export function HomeProvider({children}) {

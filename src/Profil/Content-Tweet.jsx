@@ -34,7 +34,7 @@ export default function ContenTweet() {
                             <span>{e.item.rettwet}</span>
                         </div>
                         <div className="flex gap-1">
-                                <IconsLove />
+                                {IconsLove(e.item)}
                             <span>{e.item.likes}</span>
                         </div>
                         <div className="flex gap-1">

@@ -1,5 +1,5 @@
 import { useHomeContext } from "../Context/Home-context";
-import { IconsComent, IconsLove, IconsRetweet, IconsSosial, IconsTerRetweet, IconsViews } from "../Utils/Icons";
+import { IconsComent, IconsLove, IconsRetweet, IconsSosial, IconsViews } from "../Utils/Icons";
 import { dataTwett } from "../Data/data-twett";
 import "../font.css";
 import Avatar from "./Avatar";
@@ -7,11 +7,9 @@ import ImageStatus from "./Image-Status";
 import Status from "./Status";
 import Username from "./Username";
 import '../App.css'
-import { useEffect } from "react";
 
 export default function ContentAnda() {
-  const [state, dispatch] = useHomeContext()
-  // console.log(state.getRetweet);
+  const [, dispatch] = useHomeContext()
 
   return (
     <div className="flex flex-col mt-24 mb-[140px] h-max justify-around gap-20">
