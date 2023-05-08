@@ -1,11 +1,12 @@
 import { useHomeContext } from "../Context/Home-context";
 import Avatar from "../Utils/avatar";
 import "../font.css";
+import '../App.css'
 
 export function NavHome() {
-  const [state, dispatch] = useHomeContext()
-  const untukAnda = state.borderUntukanda
-  const mengikuti = state.borderMengikuti
+  // const [state, dispatch] = useHomeContext()
+  // const untukAnda = state.borderUntukanda
+  // const mengikuti = state.borderMengikuti
 
   return (
     <div className="nav-home fixed z-10 text-white top-0 w-[100%] m-auto h-max bg-black -mt-1 p-1 font-saya">
@@ -24,10 +25,10 @@ export function NavHome() {
       </div>
       <div className=" w-[70%] m-auto h-[30px] mt-4 flex justify-between items-center box-border text-[.9rem]">
         <div className="text-slate-500">
-            <button className={`${untukAnda}`} onClick={() => dispatch({type: 'UntukAnda'})}>Untuk Anda</button>
+            <button className={`border-aktif`}>Untuk Anda</button>
         </div>
         <div className="text-slate-500">
-        <button className={`${mengikuti}`} onClick={() => dispatch({type: 'Mengikuti'})}>Mengikuti</button>
+        <button className={`border-aktif`}>Mengikuti</button>
         </div>
       </div>
     </div>

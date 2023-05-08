@@ -13,7 +13,7 @@ export default function ContenPesan() {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem facilis odit delectus quisquam.</p>
                 </div>
                 <div className="mt-6">
-                    <button className="w-[130px] h-[45px] rounded-2xl bg-[#038ff3]">Tulis Pesan</button>
+                    <button className="w-[130px] h-[45px] rounded-2xl bg-[#038ff3] hover:bg-[#0172c3] duration-300 transition-all">Tulis Pesan</button>
                 </div>
             </div>
         </div>

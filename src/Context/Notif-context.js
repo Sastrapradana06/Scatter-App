@@ -11,21 +11,14 @@ export const useNotifContext = () => {
 
 function reducer(state, action) {
     switch(action.type) {
-        case 'BorderSemuaAktif':
+        case 'ContentSemuaAktif':
             return {...state, 
-                borderSemua: 'border-aktif', borderTerverifikasi: '', 
-                borderSebutan: '', 
                 contenAktif: <Semua />}
-        case 'BorderTerverifikasiAktif':
+        case 'ContentTerverifikasiAktif':
             return {...state, 
-                borderTerverifikasi: 'border-aktif', borderSebutan: '',
-                borderSemua: '',
                 contenAktif: <Terverifikasi />}
-        case 'BorderSebutanAktif':
+        case 'ContentSebutanAktif':
             return {...state, 
-                borderSebutan: 'border-aktif', 
-                borderSemua: '', 
-                borderTerverifikasi: '',
                 contenAktif: <Sebutan />}
         default:
             throw new Error()
@@ -33,9 +26,6 @@ function reducer(state, action) {
 }
 
 const initialState = {
-    borderSemua: 'border-aktif',
-    borderTerverifikasi: '',
-    borderSebutan: '',
     contenAktif: <Semua />
 }
 

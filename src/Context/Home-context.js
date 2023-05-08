@@ -24,6 +24,12 @@ function  reducer(state, action) {
             return {...state, statusSuka: false , getSuka: action.payload}
         case 'Love':
             return {...state, love: 'crimson'}
+        case 'GetShowAvatar':
+            return {...state, showAvatar: action.payload}
+        case 'CloseShowAvatar':
+            return {...state, showAvatar: 'hidden'}
+        case 'GetAvatar':
+            return {...state, avatar: action.payload}
         default:
             throw new Error()
     }
@@ -36,7 +42,9 @@ const initialState = {
     getRetweet: [],
     getSuka: [],
     statusRetweet: false,
-    statusSuka: false
+    statusSuka: false,
+    showAvatar: 'hidden',
+    avatar: 'y'
 }
 
 export function HomeProvider({children}) {

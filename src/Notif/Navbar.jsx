@@ -1,4 +1,4 @@
-import Avatar from "../Utils/avatar";
+
 import IconsSetting from "../Utils/icons-setting";
 import "../App.css";
 import { useNotifContext } from "../Context/Notif-context";
@@ -21,14 +21,14 @@ export default function Navbar() {
         </div>
       </div>
       <div className="w-[100%] mt-6 border-b-2 border-[#1e1d1d] flex justify-around items-center text-[.9rem] text-slate-500">
-        <div className={`${state.borderSemua} w-[20%] border-blue-600 flex justify-center`}>
-          <button onClick={() => dispatch({ type: "BorderSemuaAktif" })}>Semua</button>
+        <div className={` w-[20%] flex justify-center`}>
+          <button onClick={() => dispatch({ type: "ContentSemuaAktif" })} className="border-aktif">Semua</button>
         </div>
-        <div className={`${state.borderTerverifikasi} w-[20%] border-blue-600 flex justify-center`}>
-          <button onClick={() => dispatch({ type: "BorderTerverifikasiAktif" })}>Terverifikasi</button>
+        <div className={`w-[20%] border-blue-600 flex justify-center`}>
+          <button onClick={() => dispatch({ type: "ContentTerverifikasiAktif" })} className="border-aktif">Terverifikasi</button>
         </div>
-        <div className={`${state.borderSebutan} w-[20%] border-blue-600 flex justify-center`}>
-          <button onClick={() => dispatch({ type: "BorderSebutanAktif" })}>Sebutan</button>
+        <div className={`w-[20%] border-blue-600 flex justify-center`}>
+          <button onClick={() => dispatch({ type: "ContentSebutanAktif" })} className="border-aktif">Sebutan</button>
         </div>
       </div>
     </div>

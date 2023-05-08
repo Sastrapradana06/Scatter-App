@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../App.css";
 import { useHomeContext } from "../Context/Home-context";
 import { useProfilContext } from "../Context/Profil-context";
@@ -5,6 +6,7 @@ import { DataUser } from "../Data/data-user";
 import AvatarProfil from "../Profil/Avatar-Profil";
 import BtnNavigasi from "../Profil/Btn-Navigasi";
 import { useEffect } from "react";
+import BtnEdit from "../Profil/Btn-Edit";
 
 export default function Profil() {
   const user = DataUser;
@@ -26,9 +28,7 @@ export default function Profil() {
         <div className="w-full h-[130px] bg-[#138fdc] border-1 "></div>
         <div className="w-full flex justify-between p-3">
           <AvatarProfil />
-          <div className="border w-max p-2 rounded-2xl relative right-0">
-            <button>Edit profil</button>
-          </div>
+          <BtnEdit />
         </div>
       </div>
       <div className="section-tengah w-[90%] m-auto">
@@ -75,7 +75,7 @@ export default function Profil() {
           </div>
         </div>
       ) : ( '')}
-      <div className=" w-full p-1 mb-[60px]">
+      <div className=" w-full p-1 mb-[130px]">
         {state2.dataProfilTampil}
       </div>
     </div>
