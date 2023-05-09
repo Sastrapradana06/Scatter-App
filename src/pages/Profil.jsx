@@ -1,15 +1,16 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "../App.css";
 import { useHomeContext } from "../Context/Home-context";
 import { useProfilContext } from "../Context/Profil-context";
-import { DataUser } from "../Data/data-user";
 import AvatarProfil from "../Profil/Avatar-Profil";
 import BtnNavigasi from "../Profil/Btn-Navigasi";
 import { useEffect } from "react";
 import BtnEdit from "../Profil/Btn-Edit";
+import { useEditProfilContext } from "../Context/EditProfil-context";
 
 export default function Profil() {
-  const user = DataUser;
+  const [item] = useEditProfilContext()
+  const user = item.dataUser
   const [state] = useHomeContext();
   const [state2] = useProfilContext();
 

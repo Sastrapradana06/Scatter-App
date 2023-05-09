@@ -2,11 +2,12 @@
 import IconsSetting from "../Utils/icons-setting";
 import "../App.css";
 import { useNotifContext } from "../Context/Notif-context";
-import { DataUser } from "../Data/data-user";
+import { useEditProfilContext } from "../Context/EditProfil-context";
 
 export default function Navbar() {
   const [state, dispatch] = useNotifContext();
-  const user = DataUser
+  const [item] = useEditProfilContext()
+  const user = item.dataUser
   return (
     <div className="">
       <div className="w-[100%] flex justify-between items-center">

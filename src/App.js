@@ -21,8 +21,8 @@ import { EditProfilProvider } from './Context/EditProfil-context';
 function App() {
   return (
     <div className="font-saya">
-      <Navbar />
       <NavProvider>
+      <Navbar />
       <EditProfilProvider>
       <Sidebar />
       <ProfilProvider>

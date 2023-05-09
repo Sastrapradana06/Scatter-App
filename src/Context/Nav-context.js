@@ -31,6 +31,12 @@ function reducer(state, action) {
         case 'SidebarNonAktif':
             return {...state, 
                 statusSidebar: 'hidden'}
+        case 'NavBawahAktif':
+            return {...state, 
+                statusNavBawah: '',}
+        case 'NavBawahNonAktif':
+            return {...state, 
+                statusNavBawah: 'hidden'}
         default:
             throw new Error()
     }
@@ -45,6 +51,7 @@ const initialState = {
     contenLainnya: 'hidden',
     classInput: 'input',
     statusSidebar: 'hidden',
+    statusNavBawah: ''
 }
 
 export function NavProvider({children}) {
