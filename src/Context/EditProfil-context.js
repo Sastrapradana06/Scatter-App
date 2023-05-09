@@ -1,3 +1,4 @@
+import { DataUser } from "../Data/data-user";
 const { createContext, useReducer, useContext } = require("react");
 
 export const EditProfilContext = createContext({})
