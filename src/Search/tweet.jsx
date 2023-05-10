@@ -6,7 +6,7 @@ export default function Tweet() {
     <div className={`flex flex-col w-[95%] justify-around m-auto mt-2 gap-2 cursor-pointer`}>
       {DataSearch.map((item) => {
         return (
-          <div className="flex items-center justify-between" key={item.id}>
+          <div className="flex items-center justify-between" key={item.judul}>
             <div className="w-[80%] flex flex-col gap-1 text-[.8rem] mt-2">
               <p className="text-gray-600 font-[600]">{item.tema}</p>
               <p className="font-[550]">{item.judul}</p>

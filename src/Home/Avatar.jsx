@@ -1,8 +1,7 @@
 import { useHomeContext } from "../Context/Home-context";
 
 export default function Avatar(item) {
-  const [state, dispatch] = useHomeContext()
-  console.log(state.avatar);
+  const [, dispatch] = useHomeContext()
   function showAvatar(e) {
     console.error(e);
 

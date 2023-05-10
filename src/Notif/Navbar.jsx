@@ -1,13 +1,12 @@
-
 import IconsSetting from "../Utils/icons-setting";
 import "../App.css";
 import { useNotifContext } from "../Context/Notif-context";
-import { useEditProfilContext } from "../Context/EditProfil-context";
+import { useDataUserContext } from "../Context/DataUser";
 
 export default function Navbar() {
   const [state, dispatch] = useNotifContext();
-  const [item] = useEditProfilContext()
-  const user = item.dataUser
+  const [item] = useDataUserContext();
+  const user = item.dataUser;
   return (
     <div className="">
       <div className="w-[100%] flex justify-between items-center">
@@ -23,13 +22,19 @@ export default function Navbar() {
       </div>
       <div className="w-[100%] mt-6 border-b-2 border-[#1e1d1d] flex justify-around items-center text-[.9rem] text-slate-500">
         <div className={` w-[20%] flex justify-center`}>
-          <button onClick={() => dispatch({ type: "ContentSemuaAktif" })} className="border-aktif">Semua</button>
+          <button onClick={() => dispatch({ type: "ContentSemuaAktif" })} className="border-aktif">
+            Semua
+          </button>
         </div>
         <div className={`w-[20%] border-blue-600 flex justify-center`}>
-          <button onClick={() => dispatch({ type: "ContentTerverifikasiAktif" })} className="border-aktif">Terverifikasi</button>
+          <button onClick={() => dispatch({ type: "ContentTerverifikasiAktif" })} className="border-aktif">
+            Terverifikasi
+          </button>
         </div>
         <div className={`w-[20%] border-blue-600 flex justify-center`}>
-          <button onClick={() => dispatch({ type: "ContentSebutanAktif" })} className="border-aktif">Sebutan</button>
+          <button onClick={() => dispatch({ type: "ContentSebutanAktif" })} className="border-aktif">
+            Sebutan
+          </button>
         </div>
       </div>
     </div>

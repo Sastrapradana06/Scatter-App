@@ -15,15 +15,20 @@ import { ProfilProvider } from './Context/Profil-context';
 import ShowAvatar from './pages/Show-Avatar';
 import TulisTweet from './pages/Tulis-Tweet';
 import EditProfil from './pages/Edit-Profil';
-import { EditProfilProvider } from './Context/EditProfil-context';
+import { DataUserProvider } from './Context/DataUser';
+import { useEffect } from 'react';
+
 
 
 function App() {
+  useEffect(() => {
+    window.ResizeObserver = undefined;
+  })
   return (
     <div className="font-saya">
       <NavProvider>
       <Navbar />
-      <EditProfilProvider>
+      <DataUserProvider>
       <Sidebar />
       <ProfilProvider>
       <HomeProvider>
@@ -43,7 +48,7 @@ function App() {
       </NotifProvider>
       </HomeProvider>
       </ProfilProvider>
-      </EditProfilProvider>
+      </DataUserProvider>
       </NavProvider>
     </div>
   );

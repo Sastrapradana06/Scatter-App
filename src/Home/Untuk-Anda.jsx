@@ -12,7 +12,7 @@ export default function ContentAnda() {
   const [, dispatch] = useHomeContext()
 
   return (
-    <div className="flex flex-col mt-24 mb-[140px] h-max justify-around gap-20">
+    <div className={`flex flex-col mb-[140px] h-max justify-around gap-20 mt-24`}>
       {dataTwett.map((users) => {
         return (
           <div className="w-[100%] h-max p-1 flex justify-around font-saya text-white" key={users.likes}>

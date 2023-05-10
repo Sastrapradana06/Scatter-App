@@ -6,11 +6,11 @@ import AvatarProfil from "../Profil/Avatar-Profil";
 import BtnNavigasi from "../Profil/Btn-Navigasi";
 import { useEffect } from "react";
 import BtnEdit from "../Profil/Btn-Edit";
-import { useEditProfilContext } from "../Context/EditProfil-context";
+import { useDataUserContext } from "../Context/DataUser";
 
 export default function Profil() {
-  const [item] = useEditProfilContext()
-  const user = item.dataUser
+  const [item] = useDataUserContext();
+  const user = item.dataUser;
   const [state] = useHomeContext();
   const [state2] = useProfilContext();
 
@@ -75,10 +75,10 @@ export default function Profil() {
             </p>
           </div>
         </div>
-      ) : ( '')}
-      <div className=" w-full p-1 mb-[130px]">
-        {state2.dataProfilTampil}
-      </div>
+      ) : (
+        ""
+      )}
+      <div className=" w-full p-1 mb-[130px]">{state2.dataProfilTampil}</div>
     </div>
   );
 }

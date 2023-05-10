@@ -2,10 +2,12 @@ import { useNavContext } from "../Context/Nav-context";
 import AvatarSidebar from "../Sidebar/Avatar-Sidebar";
 import BtnCloseSidebar from "../Sidebar/BtnClose-Sidebar";
 import "../App.css";
-import { DataUser } from "../Data/data-user";
+// import { DataUser } from "../Data/data-user";
+import { useDataUserContext } from "../Context/DataUser";
 export function Sidebar() {
   const [state] = useNavContext();
-  const user = DataUser
+  const [item] = useDataUserContext();
+  const user = item.dataUser;
 
   return (
     <div className={`${state.statusSidebar} sidebar fixed top-0 w-[350px] h-[100%] bg-[black] border-r border-[#ffffff56] p-[20px] z-20 text-white`}>
@@ -23,7 +25,7 @@ export function Sidebar() {
             {user.mengikuti} <span className="text-gray-500">Mengikuti</span>
           </p>
           <p>
-            {user.pengikut} <span className="text-gray-500">Pengikut</span>
+            {user.pengikut} <span className="text-gray-500 ">Pengikut</span>
           </p>
         </div>
       </div>
