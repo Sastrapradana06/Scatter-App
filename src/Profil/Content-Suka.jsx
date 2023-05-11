@@ -1,4 +1,5 @@
 import { useHomeContext } from "../Context/Home-context"
+import Avatar from "../Home/Avatar"
 import {  IconsComent, IconsRetweet, IconsSosial, IconsTerLove, IconsVerified, IconsViews  } from "../Utils/Icons"
 
 export default function ContentSuka() {
@@ -8,9 +9,9 @@ export default function ContentSuka() {
         (state.getSuka.map((e) => {
             return  (
             <div className="flex gap-3 mt-3 w-[95%] m-auto" key={e.item.coment}>
-                <img src={e.item.avatar} alt="" className="w-[60px] h-[50px] rounded-full object-cover"/>
+                {Avatar(e.item)}
                 <div className="flex flex-col gap-1 w-full text-[.9rem]">
-                    <div className="flex gap-1 items-center w-full">
+                    <div className="flex gap-1 flex-wrap items-center w-full">
                         <p className="font-[500] text-[1rem] bg">{e.item.user}</p>
                         {e.item.verifaed ? (
                             <IconsVerified />

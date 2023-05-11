@@ -60,3 +60,18 @@
     left: -100%;
   }
 }
+
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; 
+  -moz-tap-highlight-color: transparent; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+}
+
+*:active {
+  /* background-color: transparent; */
+  outline: none;
+}

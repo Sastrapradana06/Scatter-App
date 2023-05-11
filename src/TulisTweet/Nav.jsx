@@ -18,7 +18,7 @@ export default function Nav() {
         </Link>
       </div>
       <div className="">
-        <button className="w-[70px] h-[30px] bg-[#00aeff] rounded-2xl text-[.8rem]" onClick={() => dispatch({ type: "AlertTampil" })}>
+        <button className="w-[70px] h-[30px] bg-[#00aeff] rounded-2xl text-[.8rem] hover:bg-[#067cdc] transition-all duration-300" onClick={() => dispatch({ type: "AlertTampil" })}>
           Tweet
         </button>
       </div>

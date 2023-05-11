@@ -3,7 +3,6 @@ import { useHomeContext } from "../Context/Home-context";
 export default function Avatar(item) {
   const [, dispatch] = useHomeContext()
   function showAvatar(e) {
-    console.error(e);
 
     dispatch({
       type: 'GetAvatar',

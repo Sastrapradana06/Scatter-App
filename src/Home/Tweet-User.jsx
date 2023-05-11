@@ -10,6 +10,7 @@ export default function TweetUserr() {
   const [state] = useDataUserContext()
   const user = state.dataUser
 
+
   return (
     <div className="flex flex-col mt-24 -mb-[100px] h-max justify-around gap-2">
         {state.dataTweet.map((users) => {
@@ -24,35 +25,35 @@ export default function TweetUserr() {
                     <p className="text-slate-500">. Baru saja</p>
                 </div>
                 <div className="status">
-                    <p className="font-status text-[.9rem]">{users.statusTweet}</p>
+                    <p className="font-status text-[.9rem]">{users.status}</p>
                 </div>
-                {!users.imageTweet ? '' : (
-                    <img src={users.imageTweet} alt="" className="bg-center object-cover w-[100%] h-[100%] rounded-2xl mt-2" />
+                {!users.photo ? '' : (
+                    <img src={users.photo} alt="" className="bg-center object-cover w-[100%] h-[100%] rounded-2xl mt-2" />
                 )}
-                <div className="mt-2 flex w-[95%] justify-around cursor-pointer">
+                <div className="mt-2 text-[.8rem] flex w-[95%] justify-around cursor-pointer">
                 {/* coment */}
                 <div className="flex items-center gap-1">
                     <button onClick={() => dispatch({ type: "Coment" })}>
                     <IconsComent />
                     </button>
-                    <p className="text-[.9rem] text-slate-500">{users.coment}</p>
+                    <p className=" text-slate-500">{users.coment}</p>
                 </div>
                 {/* retwet */}
                 <div className="flex items-center gap-1">
                     {IconsRetweet(users)}
-                    <p className="text-[.9rem] text-slate-500">{users.retweet}</p>
+                    <p className=" text-slate-500">{users.rettwet}</p>
                 </div>
                 {/* like */}
                 <div className="flex items-center gap-1">
                     {IconsLove(users)}
-                    <p className="text-[.9rem] text-slate-500">{users.like}</p>
+                    <p className=" text-slate-500">{users.likes}</p>
                 </div>
                 {/* tayangan */}
                 <div className="flex items-center gap-1">
                     <span>
                     <IconsViews />
                     </span>
-                    <p className="text-[.9rem] text-slate-500">{users.views}</p>
+                    <p className=" text-slate-500">{users.penayangan}</p>
                 </div>
                 {/* btn all */}
                 <div className="flex items-center gap-1">

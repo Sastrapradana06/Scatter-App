@@ -11,12 +11,16 @@ export default function TulisTweet() {
         dispatch({
             type: 'GetDataTweet',
             payload: [...state.dataTweet, {
-                statusTweet: state.statusTweet,
-                imageTweet: state.imageTweet,
+                avatar: user.avatar,
+                user: user.name,
+                name: user.username,
+                waktu: 'baru saja',
+                status: state.statusTweet,
+                photo: state.imageTweet,
                 coment: state.coment,
-                retweet: state.retweet,
-                like: state.like,
-                views: state.views
+                rettwet: state.retweet,
+                likes: state.like,
+                penayangan: state.views
             }]
         })
     }
@@ -46,7 +50,6 @@ export default function TulisTweet() {
                         <div className="input-image w-full  h-max">
                             <input 
                                 type="text"
-                                value={state.imageTweet}
                                 onChange={(e) => dispatch({type: 'GetImageTweet', payload: e.target.value})}
                                 placeholder="Masukkan url image"
                                 className="w-full bg-transparent mt-4 text-[.8rem] p-1 border" 
