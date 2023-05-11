@@ -8,9 +8,9 @@ export default function ContentSuka() {
     return (
         (state.getSuka.map((e) => {
             return  (
-            <div className="flex gap-3 mt-3 w-[95%] m-auto" key={e.item.coment}>
+            <div className="flex gap-3 mt-3 w-[95%] m-auto mb-10" key={e.item.coment}>
                 {Avatar(e.item)}
-                <div className="flex flex-col gap-1 w-full text-[.9rem]">
+                <div className="flex w-[85%] flex-col gap-1 text-[.9rem]">
                     <div className="flex gap-1 flex-wrap items-center w-full">
                         <p className="font-[500] text-[1rem] bg">{e.item.user}</p>
                         {e.item.verifaed ? (
