@@ -1,6 +1,6 @@
 import { useHomeContext } from "../Context/Home-context";
 
-export default function Avatar(item) {
+export default function AvatarTweet(item) {
   const [, dispatch] = useHomeContext()
   function showAvatar(e) {
 
@@ -20,7 +20,7 @@ export default function Avatar(item) {
   return (
     <div className="w-[45px] h-[45px] rounded-full border border-black overflow-hidden"
     onClick={showAvatar.bind(this, item)}>
-      <img src={item.avatar} alt="" className="" />
+      <img src={item.avatar} alt="" className="object-cover" />
     </div>
   );
 };

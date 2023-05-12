@@ -27,7 +27,7 @@ export default function TweetUserr() {
                 <div className="status">
                     <p className="font-status text-[.9rem]">{users.status}</p>
                 </div>
-                {!users.photo ? '' : (
+                {users.photo === '' ? '' : (
                     <img src={users.photo} alt="" className="bg-center object-cover w-[100%] h-[100%] rounded-2xl mt-2" />
                 )}
                 <div className="mt-2 text-[.8rem] flex w-[95%] justify-around cursor-pointer">

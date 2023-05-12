@@ -41,6 +41,8 @@ function  reducer(state, action) {
             return {...state, like: action.payload}
         case 'GetViews':
             return {...state, views: action.payload}
+        case 'GetMedia':
+            return {...state, dataMedia: action.payload}
         default:
             throw new Error()
     }
@@ -49,6 +51,8 @@ function  reducer(state, action) {
 
 const initialState = {
     dataUser: DataUser,
+    dataTweet: [],
+    dataMedia: [],
     avatar: DataUser.avatar,
     name: DataUser.name,
     username: DataUser.username,
@@ -56,7 +60,6 @@ const initialState = {
     mengikuti: DataUser.mengikuti,
     pengikut: DataUser.pengikut,
     alert: 'hidden',
-    dataTweet: [],
     statusTweet: '',
     imageTweet: '',
     coment: '',

@@ -1,6 +1,6 @@
 import { useHomeContext } from "../Context/Home-context";
-import Avatar from "../Home/Avatar";
 import { IconsComent, IconsLove, IconsSosial, IconsTerRetweet, IconsVerified, IconsViews } from "../Utils/Icons";
+import AvatarTweet from "./AvatarTweet";
 
 export default function ContenTweet() {
   const [state] = useHomeContext();
@@ -8,7 +8,7 @@ export default function ContenTweet() {
     return (
       <div className="flex gap-3 mt-3 w-[95%] m-auto mb-6" key={e.item.coment}>
         {/* <img src={e.item.avatar} alt="" className="w-[50px] h-[50px] rounded-full object-cover" /> */}
-        {Avatar(e.item)}
+        {AvatarTweet(e.item)}
         <div className="flex flex-col gap-1 w-[85%] text-[.7rem]">
           <div className="flex gap-2 flex-wrap items-center w-full">
             <p className="font-[500] text-[.9rem]">{e.item.user}</p>
@@ -20,7 +20,7 @@ export default function ContenTweet() {
             <p>{e.item.status}</p>
           </div>
           {!e.item.photo ? '' : (
-                    <img src={e.item.photo} alt="" className="bg-center object-cover w-[100%] h-[100%] rounded-2xl mt-2" />
+            <img src={e.item.photo} alt="" className="bg-center object-cover w-[100%] h-[100%] rounded-2xl mt-2" />
           )}
           {/* <img src={e.item.photo} alt="" className="w-[100%] h-[350px] rounded-xl object-cover " /> */}
           <div className="flex gap-3 items-center text-[.8rem] text-gray-400">
