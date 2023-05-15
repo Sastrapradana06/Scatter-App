@@ -44,7 +44,7 @@ export default function ContentMedia() {
               <p>{e.status}</p>
             </div>
             <img src={e.photo} alt="" className="w-full h-[100%] rounded-xl object-cover " />
-            <div className="flex gap-3 items-center text-[.8rem] text-gray-400">
+            <div className="flex justify-around items-center text-[.7rem] text-gray-400">
               <div className="flex gap-1">
                 <IconsComent />
                 <span>{e.coment}</span>

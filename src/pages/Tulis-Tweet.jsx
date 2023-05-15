@@ -1,10 +1,11 @@
 import { useDataUserContext } from "../Context/DataUser";
 import Nav from "../TulisTweet/Nav";
 import Alert from "../Utils/Alert";
-
+import UploadImage from "../TulisTweet/Upload-Image";
 export default function TulisTweet() {
     const [state, dispatch] = useDataUserContext()
     const user = state.dataUser
+    // console.log(state.dataTweet);
     function getTweet(event) {
         event.preventDefault()
         dispatch({
@@ -69,14 +70,8 @@ export default function TulisTweet() {
                                 placeholder="Apa yang sedang terjadi??" className="bg-transparent w-full h-[100px] outline-none"
                             />
                         </div>
-                        <div className="input-image w-full  h-max">
-                            <input 
-                                type="text"
-                                value={state.imageTweet}
-                                onChange={(e) => dispatch({type: 'GetImageTweet', payload: e.target.value})}
-                                placeholder="Masukkan url image"
-                                className="w-full bg-transparent mt-4 text-[.8rem] p-1 border" 
-                            />
+                        <div className="input-image w-full  h-max cursor-pointer mb-2">
+                            <UploadImage/>
                         </div>
                         <div className="input-all flex gap-4">
                             <div className="coment text-[.7rem] text-center">

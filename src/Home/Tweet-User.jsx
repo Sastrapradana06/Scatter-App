@@ -12,7 +12,7 @@ export default function TweetUserr() {
 
 
   return (
-    <div className="flex flex-col mt-24 -mb-[100px] h-max justify-around gap-2">
+    <div className="flex flex-col mt-24 -mb-[100px] h-max justify-around">
         {state.dataTweet.map((users) => {
         return (
             <div className="w-[100%] h-max p-1 flex justify-around font-saya text-white " key={users.like}>
@@ -30,7 +30,7 @@ export default function TweetUserr() {
                 {users.photo === '' ? '' : (
                     <img src={users.photo} alt="" className="bg-center object-cover w-[100%] h-[100%] rounded-2xl mt-2" />
                 )}
-                <div className="mt-2 text-[.8rem] flex w-[95%] justify-around cursor-pointer">
+                <div className="mt-2 text-[.7rem] flex w-[95%] justify-around cursor-pointer">
                 {/* coment */}
                 <div className="flex items-center gap-1">
                     <button onClick={() => dispatch({ type: "Coment" })}>
@@ -53,7 +53,7 @@ export default function TweetUserr() {
                     <span>
                     <IconsViews />
                     </span>
-                    <p className=" text-slate-500">{users.penayangan}</p>
+                    <p className=" text-slate-500 ">{users.penayangan}</p>
                 </div>
                 {/* btn all */}
                 <div className="flex items-center gap-1">

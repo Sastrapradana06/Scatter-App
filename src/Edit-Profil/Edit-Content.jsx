@@ -1,4 +1,5 @@
 import { useDataUserContext } from "../Context/DataUser";
+import InputProfil from "./Input-Profil";
 
 export default function EditContent() {
   const [state, dispatch] = useDataUserContext();
@@ -8,13 +9,7 @@ export default function EditContent() {
       <div className="avatar w-full  flex flex-col justify-center gap-4 items-center mt-4">
         <img src={state.avatar} alt="" className="w-[100px] h-[100px] border border-[black] rounded-full object-cover" />
         <div className="w-[90%] text-[.8rem] ">
-          <p className="text-gray-400">Masukkan url Avatar</p>
-          <input
-            type="text"
-            value={state.avatar}
-            onChange={(e) => dispatch({ type: "EditAvatar", payload: e.target.value })}
-            className="w-full h-[30px] bg-transparent border-b-[1px] border-[gray] mt-1 p-2 focus:outline-none focus:border-[#0088ff] focus:border-b-2"
-          />
+          <InputProfil />
         </div>
       </div>
       <div className="name avatar w-[90%] m-auto  flex flex-col  mt-4  text-[.8rem]">

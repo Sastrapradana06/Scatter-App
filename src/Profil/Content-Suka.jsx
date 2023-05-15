@@ -34,7 +34,7 @@ export default function ContentSuka() {
                             <p>{e.item.status}</p>
                         </div>
                         <img src={e.item.photo} alt=""  className="w-full h-[100%] rounded-xl object-cover "/>
-                        <div className="flex gap-3 items-center text-[.8rem] text-gray-400">
+                        <div className="flex justify-around items-center text-[.7rem] text-gray-400">
                             <div className="flex gap-1">
                                     <IconsComent />
                                 <span>{e.item.coment}</span>
