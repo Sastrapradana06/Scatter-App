@@ -5,15 +5,15 @@ import UploadImage from "../TulisTweet/Upload-Image";
 export default function TulisTweet() {
     const [state, dispatch] = useDataUserContext()
     const user = state.dataUser
-    // console.log(state.dataTweet);
+
     function getTweet(event) {
         event.preventDefault()
         dispatch({
             type: 'GetDataTweet',
             payload: [{
-                avatar: user.avatar,
-                user: user.name,
-                name: user.username,
+                avatar: state.avatar,
+                user: state.name,
+                name: state.username,
                 waktu: 'baru saja',
                 status: state.statusTweet,
                 photo: state.imageTweet,

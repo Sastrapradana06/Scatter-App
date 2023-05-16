@@ -1,6 +1,10 @@
 import { Link} from "react-router-dom";
 import { useHomeContext } from "../Context/Home-context";
 import { useNavContext } from "../Context/Nav-context";
+import { RiDeleteBinLine } from "react-icons/ri";
+import { useDataUserContext } from "../Context/DataUser";
+// import { useHomeContext } from "../Context/Home-context";
+
 
 function IconsComent() {
   return (
@@ -12,6 +16,7 @@ function IconsComent() {
 
 function IconsRetweet(e) {
   const [state, dispatch] = useHomeContext();
+  // console.log(state.getRetweet);
 
   function Retweet(item) {
     const updatedData = state.getRetweet.filter((data) => data.item !== item);
@@ -170,4 +175,49 @@ function IconsClose() {
   );
 }
 
-export { IconsComent, IconsRetweet, IconsLove, IconsViews, IconsSosial, IconsVerified, IconsTerRetweet, IconsTerLove, IconsClose };
+
+function IconsDelete(data) {
+  const [state, dispatch] = useDataUserContext()
+  const [state2, dispatch2] = useHomeContext();
+  const user = state.dataTweet
+  const retweeet = state2.getRetweet
+  const suka = state2.getSuka
+
+  function deleteTweet(item) {
+
+    const newTweetUser = user.filter((e) => {
+        return e !== item
+    })
+    
+    dispatch({
+      type: 'GetDataTweet',
+      payload: newTweetUser
+    })
+
+    const newRetweet = retweeet.filter((e) => {
+      return e.item !== item
+  })
+
+    dispatch2({
+      type: 'GetRetweet',
+      payload: newRetweet
+    })
+
+    const newSuka = suka.filter((e) => {
+      return e.item !== item
+  })
+
+    dispatch2({
+      type: 'GetSuka',
+      payload: newSuka
+    })
+
+  }
+  return (
+    <button className=" w-max ml-2 text-[1.2rem]" onClick={deleteTweet.bind(this, data)}>
+      <RiDeleteBinLine color="crimson" width={50}/>
+    </button>
+  )
+}
+
+export { IconsComent, IconsRetweet, IconsLove, IconsViews, IconsSosial, IconsVerified, IconsTerRetweet, IconsTerLove, IconsClose, IconsDelete };

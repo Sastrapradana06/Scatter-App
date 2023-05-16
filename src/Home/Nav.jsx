@@ -1,15 +1,28 @@
-import { useHomeContext } from "../Context/Home-context";
+import React, { useState, useEffect } from 'react';
 import Avatar from "../Utils/avatar";
 import "../font.css";
 import '../App.css'
 
 export function NavHome() {
-  // const [state, dispatch] = useHomeContext()
-  // const untukAnda = state.borderUntukanda
-  // const mengikuti = state.borderMengikuti
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const isVisible = prevScrollPos > currentScrollPos;
+
+      setPrevScrollPos(currentScrollPos);
+      setVisible(isVisible);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos]);
+
 
   return (
-    <div className="nav-home fixed z-10 text-white top-0 w-[100%] m-auto h-max bg-black -mt-1 p-1 font-saya">
+    <div className={`${visible ? '' : 'hidden'}   nav-home fixed z-10 text-white top-0 w-[100%] m-auto h-max bg-black -mt-1 p-1 font-saya`}>
       <div className="nav-atas h-[40px] w-[95%] m-auto mt-1 text-white flex justify-between items-center">
         <Avatar />
         <div className="">

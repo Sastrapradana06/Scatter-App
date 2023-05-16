@@ -1,5 +1,4 @@
 import { useNavContext } from "../Context/Nav-context"
-import { useSearchContext } from "../Context/Search-context"
 
 export default function ContenTerkini() {
     const [state] = useNavContext()
