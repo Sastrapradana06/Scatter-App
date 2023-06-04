@@ -78,7 +78,7 @@ export default function Profil() {
       ) : (
         ""
       )}
-      <div className=" w-full p-1 mb-[130px] text-white">{state2.dataProfilTampil}</div>
+      <div className=" w-full p-1 mb-[10px] text-white">{state2.dataProfilTampil}</div>
     </div>
   );
 }

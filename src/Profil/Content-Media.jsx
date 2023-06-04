@@ -29,9 +29,9 @@ export default function ContentMedia() {
       </div>
     </div>
   ) : (
-    state.dataMedia.map((e) => {
+    state.dataMedia.map((e, i) => {
       return (
-        <div className="flex gap-3 w-[95%] m-auto mb-3 " key={e.coment}>
+        <div className="flex gap-3 w-[95%] m-auto mb-3 " key={i}>
           {Avatar(e)}
           <div className="flex w-[85%] flex-col gap-1 text-[.7rem]">
             <div className="flex gap-3 flex-wrap items-center w-full">

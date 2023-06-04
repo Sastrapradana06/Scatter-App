@@ -184,7 +184,6 @@ function IconsDelete(data) {
   const suka = state2.getSuka
 
   function deleteTweet(item) {
-
     const newTweetUser = user.filter((e) => {
         return e !== item
     })

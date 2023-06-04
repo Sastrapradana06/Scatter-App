@@ -25,7 +25,7 @@ export default function EditProfil() {
   }
 
   return (
-    <div className="w-full h-[100vh]  text-white p-3 mb-[300px]">
+    <div className="w-full h-[100vh]  text-white p-3 mb-[40px]">
       <div className="nav w-full m-auto h-[50px] border-b-[3px] border-[#4d4c4c37] flex justify-between items-center p-1">
         <div className="flex gap-10 text-[1.3rem]">
           <IconsClose />

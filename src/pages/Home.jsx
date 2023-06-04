@@ -7,7 +7,7 @@ export default function Home() {
     const [state] = useDataUserContext()
     const tweet = state.dataTweet
     return (
-        <div className=" mb-[150px]">
+        <div className=" mb-[50px]">
             <NavHome />
             {tweet.length > 0 ? <TweetUserr /> : ''}
             <ContentAnda />
