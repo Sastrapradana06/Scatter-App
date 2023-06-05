@@ -18,9 +18,9 @@ export default function ContentSuka() {
       return (
         <div className="flex gap-3 mt-3 w-[95%] m-auto mb-2 " key={e.item.coment}>
           {Avatar(e.item)}
-          <div className="flex w-[85%] flex-col gap-1 text-[.7rem]">
-            <div className="flex gap-2 flex-wrap items-center w-full">
-              <p className="font-[500] text-[.9rem] bg">{e.item.user}</p>
+          <div className="flex w-[85%] flex-col gap-1 text-[.7rem] lg:text-[1rem]">
+            <div className="flex gap-2 flex-wrap items-center w-full lg:gap-4">
+              <p className="font-[500] text-[.9rem] lg:text-[1.1rem]">{e.item.user}</p>
               {e.item.verifaed ? <IconsVerified /> : ""}
               <p className="text-gray-400">@{e.item.name}</p>
               <p className="text-gray-400">. {e.item.waktu}</p>
@@ -29,7 +29,7 @@ export default function ContentSuka() {
               <p>{e.item.status}</p>
             </div>
             {!e.item.photo ? "" : <img src={e.item.photo} alt="" className="bg-center object-cover w-[100%] h-[100%] rounded-2xl mt-2" />}
-            <div className="flex justify-around items-center text-[.7rem] text-gray-400">
+            <div className="flex justify-around items-center text-[.7rem] text-gray-400 lg:text-[1rem]">
               <div className="flex gap-1">
                 <IconsComent />
                 <span>{e.item.coment}</span>

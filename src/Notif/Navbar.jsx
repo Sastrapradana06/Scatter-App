@@ -2,16 +2,18 @@ import IconsSetting from "../Utils/icons-setting";
 import "../App.css";
 import { useNotifContext } from "../Context/Notif-context";
 import { useDataUserContext } from "../Context/DataUser";
+import { useNavContext } from "../Context/Nav-context";
 
 export default function Navbar() {
   const [state, dispatch] = useNotifContext();
+  const [, dispatch2] = useNavContext()
   const [item] = useDataUserContext();
   const user = item.dataUser;
   return (
     <div className="">
       <div className="w-[100%] flex justify-between items-center">
         <div className="w-[50%] ml-3 p-1 gap-8 flex items-center">
-          <button className={`${state.avatar}`} onClick={() => dispatch({ type: "SidebarAktif" })}>
+          <button className={`${state.avatar}`} onClick={() => dispatch2({ type: "SidebarAktif" })}>
             <img src={user.avatar} alt="" className={`rounded-full w-[30px] h-[30px] border-[#8080806e] object-cover`} />
           </button>
           <p className="text-[1.2rem]">Notifikasi</p>

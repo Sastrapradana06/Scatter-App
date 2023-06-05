@@ -3,7 +3,7 @@ import { DataSearch } from "../Data/data-search";
 
 export default function Tweet() {
   return (
-    <div className={`flex flex-col w-[95%] justify-around m-auto mt-2 gap-2 cursor-pointer`}>
+    <div className={`flex flex-col w-[95%] justify-around m-auto mt-2 gap-2 cursor-pointer lg:w-[85%]`}>
       {DataSearch.map((item) => {
         return (
           <div className="flex items-center justify-between" key={item.judul}>

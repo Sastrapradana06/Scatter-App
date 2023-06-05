@@ -33,9 +33,9 @@ export default function ContentMedia() {
       return (
         <div className="flex gap-3 w-[95%] m-auto mb-3 " key={i}>
           {Avatar(e)}
-          <div className="flex w-[85%] flex-col gap-1 text-[.7rem]">
-            <div className="flex gap-3 flex-wrap items-center w-full">
-              <p className="font-[500] text-[.9rem] bg">{e.user}</p>
+          <div className="flex w-[85%] flex-col gap-1 text-[.7rem] lg:text-[1rem]">
+            <div className="flex gap-3 flex-wrap items-center w-full lg:gap-4">
+              <p className="font-[500] text-[.9rem] lg:text-[1.1rem]">{e.user}</p>
               {e.verifaed ? <IconsVerified /> : ""}
               <p className="text-gray-400">@{e.name}</p>
               <p className="text-gray-400">. {e.waktu}</p>
@@ -44,7 +44,7 @@ export default function ContentMedia() {
               <p>{e.status}</p>
             </div>
             <img src={e.photo} alt="" className="w-full h-[100%] rounded-xl object-cover " />
-            <div className="flex justify-around items-center text-[.7rem] text-gray-400">
+            <div className="flex justify-around items-center text-[.7rem] text-gray-400 lg:text-[1rem]">
               <div className="flex gap-1">
                 <IconsComent />
                 <span>{e.coment}</span>

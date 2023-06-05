@@ -22,7 +22,7 @@ export default function ContentAnda() {
               {Username(users)}
               {Status(users)}
               {ImageStatus(users)}
-              <div className="mt-2 text-[.7rem] flex w-[95%] justify-around cursor-pointer ">
+              <div className="mt-2 text-[.7rem] lg:text-[1rem] flex w-[95%] justify-around cursor-pointer ">
                 {/* coment */}
                 <div className="flex items-center gap-1">
                   <button onClick={() => dispatch({type: 'Coment'})}><IconsComent /></button>

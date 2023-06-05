@@ -25,7 +25,7 @@ function App() {
     window.ResizeObserver = undefined;
   })
   return (
-    <div className="font-saya">
+    <div className="font-saya lg:w-[70%] lg:ml-[400px]">
       <NavProvider>
       <Navbar />
       <DataUserProvider>

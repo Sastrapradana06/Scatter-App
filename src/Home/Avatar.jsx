@@ -18,7 +18,7 @@ export default function Avatar(item) {
   }
 
   return (
-    <div className="w-[45px] h-[45px] rounded-full border border-black overflow-hidden "
+    <div className="w-[45px] h-[45px] lg:w-[70px] lg:h-[70px] rounded-full border border-black overflow-hidden "
     onClick={showAvatar.bind(this, item)}>
       <img src={item.avatar} alt="" className="" />
     </div>

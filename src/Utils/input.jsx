@@ -8,7 +8,7 @@ export default function Input() {
             <input 
                 type="text"
                 placeholder="Cari di Scatter"
-                className={`${state.classInput} w-[250px] h-[35px] rounded-xl p-2 text-[.8rem] cursor-pointer`}
+                className={`${state.classInput} w-[250px] lg:w-[450px] h-[35px] rounded-xl p-2 text-[.8rem] cursor-pointer`}
                 onClick={() => dispatch({type: 'InputAktif'})}
             />
         </form>

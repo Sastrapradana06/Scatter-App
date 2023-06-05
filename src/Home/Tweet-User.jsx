@@ -18,8 +18,8 @@ export default function TweetUserr() {
             {Avatar(user)}
             {/* content */}
             <div className="w-[85%] mt-1 h-max">
-              <div className="username flex w-[100%] gap-1  text-[.8rem]">
-                <p className="text-[9.rem]">{user.name}</p>
+              <div className="username flex w-[100%] gap-1  text-[.8rem] lg:text-[1rem] lg:gap-4">
+                <p className="text-[9.rem] lg:text-[1.1rem]">{user.name}</p>
                 <p className="text-slate-500">@{user.username}</p>
                 <p className="text-slate-500">. Baru saja</p>
                 {IconsDelete(users)}
@@ -28,7 +28,7 @@ export default function TweetUserr() {
                 <p className="font-status text-[.9rem]">{users.status}</p>
               </div>
               {users.photo === "" ? "" : <img src={users.photo} alt="" className="bg-center object-cover w-[100%] h-[100%] rounded-2xl mt-2" />}
-              <div className="mt-2 text-[.7rem] flex w-[95%] justify-around cursor-pointer">
+              <div className="mt-2 text-[.7rem] lg:text-[1rem] flex w-[95%] justify-around cursor-pointer">
                 {/* coment */}
                 <div className="flex items-center gap-1">
                   <button onClick={() => dispatch({ type: "Coment" })}>

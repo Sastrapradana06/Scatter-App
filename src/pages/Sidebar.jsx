@@ -10,7 +10,7 @@ export function Sidebar() {
   const user = item.dataUser;
 
   return (
-    <div className={`${state.statusSidebar} sidebar fixed top-0 w-[350px] h-[100%] bg-[black] border-r border-[#ffffff56] p-[20px] z-20 text-white`}>
+    <div className={`${state.statusSidebar} sidebar fixed top-0 w-[350px] lg:w-[400px] h-[100%] bg-[black] lg:inline-block border-r border-[#ffffff56] p-[20px] z-20 text-white`}>
       <div className="w-[95%] p-1 h-[200px] flex flex-col gap-4 border-1  m-auto">
         <div className="flex justify-between items-center w-[100%] h-[60px] ">
           <AvatarSidebar />

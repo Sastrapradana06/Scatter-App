@@ -22,7 +22,7 @@ export function NavHome() {
 
 
   return (
-    <div className={`${visible ? '' : 'hidden'}   nav-home fixed z-10 text-white top-0 w-[100%] m-auto h-max bg-black -mt-1 p-1 font-saya`}>
+    <div className={`${visible ? '' : 'hidden'} lg:w-[69%]  nav-home fixed z-10 text-white top-0 w-[100%] m-auto h-max bg-black -mt-1 p-1 font-saya`}>
       <div className="nav-atas h-[40px] w-[95%] m-auto mt-1 text-white flex justify-between items-center">
         <Avatar />
         <div className="">

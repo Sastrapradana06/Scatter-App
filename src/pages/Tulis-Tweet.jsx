@@ -48,11 +48,11 @@ export default function TulisTweet() {
     }
 
     return (
-        <div className="text-white  w-full h-[100vh]  p-2">
+        <div className="text-white  w-full h-[100vh] p-2">
             <form onSubmit={getTweet}>
                 <Nav />
                 {Alert('Tweet Berhasil Dibuat', '')}
-                <div className="w-full h-max mt-2 p-1 flex gap-2">
+                <div className="w-full h-max mt-2 p-1 flex gap-2 lg:w-[80%] lg:m-auto lg:p-3">
                     <div className="">
                         <div className="avatar">
                             <img src={user.avatar} alt="" className="w-[50px] h-[50px] rounded-full object-cover"/>
@@ -62,7 +62,7 @@ export default function TulisTweet() {
                         <div className="">
                                 <p>{user.name}</p>
                             </div>
-                        <div className="input-tweet">
+                        <div className="input-tweet lg:mb-5 lg:h-[200px]">
                             <textarea 
                                 type="text"
                                 value={state.statusTweet}
@@ -80,7 +80,7 @@ export default function TulisTweet() {
                                     value={state.coment}
                                     onChange={(e) => dispatch({type: 'GetComent', payload: e.target.value})}
                                     placeholder="coment"
-                                    className="w-[55px] bg-transparent border text-center" 
+                                    className="w-[55px] lg:w-[80px] lg:h-[25px] bg-transparent border text-center" 
                                 />
                             </div>
                             <div className="retweet text-[.7rem] text-center">
@@ -88,7 +88,7 @@ export default function TulisTweet() {
                                     type="text"
                                     onChange={(e) => dispatch({type: 'GetRetweet', payload: e.target.value})}
                                     placeholder="retweet"
-                                    className="w-[55px] bg-transparent border text-center" 
+                                    className="w-[55px] lg:w-[80px] lg:h-[25px] bg-transparent border text-center" 
                                 />
                             </div>
                             <div className="like text-[.7rem] text-center">
@@ -97,7 +97,7 @@ export default function TulisTweet() {
                                     value={state.like}
                                     onChange={(e) => dispatch({type: 'GetLike', payload: e.target.value})}
                                     placeholder="like"
-                                    className="w-[55px] bg-transparent border text-center" 
+                                    className="w-[55px] lg:w-[80px] lg:h-[25px] bg-transparent border text-center" 
                                 />
                             </div>
                             <div className="views text-[.7rem] text-center">
@@ -106,7 +106,7 @@ export default function TulisTweet() {
                                     value={state.views}
                                     onChange={(e) => dispatch({type: 'GetViews', payload: e.target.value})}
                                     placeholder="views"
-                                    className="w-[55px] bg-transparent border text-center" 
+                                    className="w-[55px] lg:w-[80px] lg:h-[25px] bg-transparent border text-center" 
                                 />
                             </div>
                         </div>

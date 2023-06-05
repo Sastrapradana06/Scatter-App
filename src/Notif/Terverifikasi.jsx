@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Terverifikasi() {
     return (
-        <div className="w-[100%] h-[75%] flex flex-col justify-center items-center m-auto">
+        <div className="w-[100%] h-[75%] flex flex-col justify-center items-center m-auto lg:w-[80%]">
             <div className="w-[90%] ">
                 <div className="text-[1.6rem]">
                     <p>Belum ada apa-apa di sini</p>
@@ -14,7 +14,7 @@ export default function Terverifikasi() {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio velit perspiciatis aperiam consequatur provident magnam, molestias autem..</p>
                 </div>
             </div>
-            <div className="w-[90%] mt-4">
+            <div className="w-[90%] mt-4 ">
                 <div className="w-[100%] text-black font-[600]">
                     <button className="w-[95%] block m-auto bg-slate-100 rounded-2xl h-[40px]">Berlangganan</button>
                 </div>

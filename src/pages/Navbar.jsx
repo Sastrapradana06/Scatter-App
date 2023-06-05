@@ -26,7 +26,7 @@ export function Navbar() {
   }, [prevScrollPos]);
 
   return (
-    <div className={`${state.statusNavBawah} ${visible ? '' : 'hidden'}  w-[100%]  text-white h-max fixed bottom-0 z-10 flex justify-between items-end flex-col`}>
+    <div className={`${state.statusNavBawah} ${visible ? '' : 'hidden'}  w-[100%] lg:w-[70%] text-white h-max fixed bottom-0 z-10 flex justify-between items-end flex-col`}>
       <IconsTulis />
       <div className="w-full h-[70px] flex justify-between items-center bg-black p-8 nav-bawah">
         <IconsHome />

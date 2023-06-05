@@ -1,6 +1,6 @@
 export default function Sebutan() {
   return (
-    <div className="w-[100%] h-[75%] flex justify-center items-center m-auto">
+    <div className="w-[100%] h-[75%] flex justify-center items-center m-auto lg:w-[80%]">
       <div className="w-[90%] ">
         <h1 className="text-[1.3rem]">
           Bergabung dalam <p>percakapan</p>
